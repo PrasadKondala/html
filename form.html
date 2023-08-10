@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bio Data Form</title>
+</head>
+<body>
+    <h1>Bio Data Form</h1>
+    <form action="/submit" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender_male" name="gender" value="male" required>
+        <label for="gender_male">Male</label>
+        <input type="radio" id="gender_female" name="gender" value="female">
+        <label for="gender_female">Female</label>
+        <input type="radio" id="gender_other" name="gender" value="other">
+        <label for="gender_other">Other</label><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" required></textarea><br><br>
+        
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
