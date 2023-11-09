@@ -1,46 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bio Data Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bio Data Form</h1>
-    <form action="/submit" method="post">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required><br><br>
-        
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required><br><br>
-        
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br><br>
-        
-        <label for="gender">Gender:</label>
-        <input type="radio" id="gender_male" name="gender" value="male" required>
-        <label for="gender_male">Male</label>
-        <input type="radio" id="gender_female" name="gender" value="female">
-        <label for="gender_female">Female</label>
-        <input type="radio" id="gender_other" name="gender" value="other">
-        <label for="gender_other">Other</label><br><br>
-        
+
+    <h2>TCS Application Form</h2>
+    
+    <form action="submit_tcs_application.php" method="post">
+
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
+        <input type="email" id="email" name="email" required>
+
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
-        
-        <label for="address">Address:</label><br>
-        <textarea id="address" name="address" rows="4" required></textarea><br><br>
-        
-        <label for="country">Country:</label>
-        <select id="country" name="country" required>
-            <option value="usa">United States</option>
-            <option value="canada">Canada</option>
-            <option value="uk">United Kingdom</option>
-            <option value="other">Other</option>
-        </select><br><br>
-        
-        <input type="submit" value="Submit">
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx">
+
+        <label for="position">Position Applied for:</label>
+        <select id="position" name="position" required>
+            <option value="developer">Developer</option>
+            <option value="analyst">Business Analyst</option>
+            <option value="tester">Quality Assurance Tester</option>
+        </select>
+
+        <button type="submit">Submit Application</button>
+
     </form>
+
 </body>
 </html>
