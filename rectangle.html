@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rectangle Drawing</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+  <script>
+    // Get the canvas element
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Define rectangle properties
+    var x = 50;
+    var y = 50;
+    var width = 200;
+    var height = 100;
+
+    // Draw the rectangle
+    ctx.fillStyle = 'black'; // Set fill color
+    ctx.fillRect(x, y, width, height); // Draw filled rectangle
+    ctx.strokeStyle = 'red'; // Set stroke color
+    ctx.lineWidth = 2; // Set stroke width
+    ctx.strokeRect(x, y, width, height); // Draw rectangle border
+  </script>
+</body>
+</html>
